@@ -60,8 +60,7 @@ Pre-requisites for Deploying Azure Terraform Files in CloudLabs
    >**Note 2:** </br> 
    If multiple regions are selected in CloudLabs and one region already has a running deployment, new deployments will automatically shift to another available region. </br>
    Important: Terraform always deploys to the region specified in the .tfvars file. </br>
-   To avoid conflicts or inconsistencies, make sure the region in .tfvars matches one of the selected regions in CloudLabs. </br>
-      
+   To avoid conflicts or inconsistencies, make sure the region in .tfvars matches one of the selected regions in CloudLabs. </br> 
    For Example, If .tfvars specifies location = "us-central1" </br>
    Then select us-central1 in CloudLabs as well. </br>
 
@@ -114,9 +113,8 @@ Pre-requisites for Deploying AWS Terraform Files in CloudLabs
    >**Note 2:** </br> 
    If multiple regions are selected in CloudLabs and one region already has a running deployment, new deployments will automatically shift to another available region. </br>
    Important: Terraform always deploys to the region specified in the .tfvars file. </br>
-   To avoid conflicts or inconsistencies, make sure the region in .tfvars matches one of the selected regions in CloudLabs. </br>
-      
-   For Example, If .tfvars specifies location = "us-central1" </br>
+   To avoid conflicts or inconsistencies, make sure the region in .tfvars matches one of the selected regions in CloudLabs. </br> 
+   For Example, If .tfvars specifies location = "us-east-1" </br>
    Then select us-central1 in CloudLabs as well. </br>
        
    **Allowed Regions (AWS) in CloudLabs:** </br>
@@ -137,3 +135,64 @@ Pre-requisites for Deploying AWS Terraform Files in CloudLabs
 
 
 #### Prerequisites (GCP) 
+
+Pre-requisites for Deploying GCP Terraform Files in CloudLabs
+      
+1. **Required .tf Files** </br>
+   Make sure you have the following four Terraform files: </br>
+   version.tf </br>
+   main.tf </br>
+   variables.tf </br>
+   outputs.tf </br>
+      
+   **Steps:** </br>
+   Compress all four files into a .zip folder. </br>
+   Upload the .zip file to a Storage account. </br>
+   Copy the public URL and paste it into the Cloud Template URL field in CloudLabs. </br>
+      
+2. **Mandatory Variables in variables.tf** </br>
+    Your variables.tf file must include the following mandatory variables: </br>
+    credentials_file 
+    project_id 
+    region 
+       
+3. **Create a seperate .tfvars File** </br>
+   Please create a .tfvars file and define values for all variables declared in your variables.tf file, including both the mandatory variables listed earlier and any additional variables required according to your deployment. </br>
+
+   **Example:** </br>
+   credentials_file = "key.json" </br> 
+   project_id          = "GET-SUBSCRIPTION-FRIENDLY-NAME" </br> 
+   region                 = "us-central1" </br> 
+      
+   Common or Optional Variable </br>
+   DID = "GET-DEPLOYMENT-ID" </br>
+   
+   >**Note 1:** For zonal resources, you must specify the zone value in both variables.tf file (e.g., variable "zone" {})      and the .tfvars file.   
+      
+   >**Note 2:** </br>
+   All mandatory variables must be present in both variables.tf file and the .tfvars file. </br>
+   Any variable without a default value in variables.tf must be provided in the .tfvars file. </br>
+   Even if a variable has a default value in variables.tf, you can still override it in the .tfvars. </br>
+      
+   >**Note 3:** </br> 
+   If multiple regions are selected in CloudLabs and one region already has a running deployment, new deployments will automatically shift to another available region. </br>
+   Important: Terraform always deploys to the region specified in the .tfvars file. </br>
+   To avoid conflicts or inconsistencies, make sure the region in .tfvars matches one of the selected regions in CloudLabs. </br> 
+   For Example, If .tfvars specifies location = "us-central1" </br>
+   Then select us-central1 in CloudLabs as well. </br>
+       
+   **Allowed Regions (GCP) in CloudLabs:** </br>
+   us-east4 </br>
+   us-west1 </br> 
+   australia-southeast1 </br> 
+   europe-west1 </br> 
+   me-west1 </br> 
+   asia-northeast1 </br> 
+   us-central1 </br> 
+
+   **Below are sample nested Terraform files for AWS:** </br>
+   **Cloud Template URL:** </br> 
+   https://cloudlabs-prod-templates-s3.s3.us-east-1.amazonaws.com/WIZ/test/GCPTerraform/Prod3.zip </br>
+
+   **Parameter Template URL:** </br> 
+   https://cloudlabs-prod-templates-s3.s3.us-east-1.amazonaws.com/WIZ/test/GCPTerraform/var_file_3.tfvars </br>
