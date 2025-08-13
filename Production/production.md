@@ -221,7 +221,7 @@ Pre-requisites for Deploying GCP Terraform Files in CloudLabs
 
    ![](./Img/03.png)
 
-8. Navigate to the **ODL (1)** section in the left menu and go to your respective ODL. Click the **Users (2)** button. and deploy the user.
+8. Navigate to the **ODL (1)** section in the left menu and go to your respective ODL. Click the **Users (2)** button and deploy the user.
 
    ![](./Img/04.png)
 
