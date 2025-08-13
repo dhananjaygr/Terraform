@@ -32,20 +32,20 @@ Pre-requisites for Deploying Azure Terraform Files in CloudLabs
       
 2. **Mandatory Variables in variables.tf** </br>
     Your variables.tf file must include the following mandatory variables: </br>
-    azure\_client\_id </br>
-    azure\_client\_secret </br>
-    azure\_subscription\_id </br>
-    azure\_tenant\_id </br>
+    azure_client_id </br>
+    azure_client_secret </br>
+    azure_subscription_id </br>
+    azure_tenant_id </br>
     location </br>
       
 3. **Create a seperate .tfvars File** </br>
    Please create a .tfvars file and define values for all variables declared in your variables.tf file, including both the mandatory variables listed earlier and any additional variables required according to your deployment. </br>
 
    Example: </br>
-   azure\_client\_id       = "GET-SUBSCRIPTION-CLIENT-ID" </br>
-   azure\_client\_secret   = "GET-SUBSCRIPTION-CLIENT-SECRET" </br>
-   azure\_subscription\_id = "GET-SUBSCRIPTION-GUID" </br>
-   azure\_tenant\_id       = "GET-TENANT-GUID" </br>
+   azure_client_id       = "GET-SUBSCRIPTION-CLIENT-ID" </br>
+   azure_client_secret   = "GET-SUBSCRIPTION-CLIENT-SECRET" </br>
+   azure_subscription_id = "GET-SUBSCRIPTION-GUID" </br>
+   azure_tenant_id       = "GET-TENANT-GUID" </br>
    location              = "eastus" </br>
       
    Common or Optional Variable  </br>
@@ -62,11 +62,13 @@ Pre-requisites for Deploying Azure Terraform Files in CloudLabs
    Important: Terraform always deploys to the region specified in the .tfvars file. </br>
    To avoid conflicts or inconsistencies, make sure the region in .tfvars matches one of the selected regions in CloudLabs. </br>
       
-   **Example:** </br>
-   If .tfvars specifies: location = "us-central1" </br>
+   For Example, If .tfvars specifies location = "us-central1" </br>
    Then select us-central1 in CloudLabs as well. </br>
 
-
+   Below are sample nested Terraform files for Azure: </br>
+   Cloud Template URL: https://experienceazure.blob.core.windows.net/templates/WIZ/Testing/main.zip </br>
+   Parameter Template URL: https://experienceazure.blob.core.windows.net/templates/WIZ/Testing/cl_variablesfile_1.tfvars </br>
+ 
 #### Prerequisites (AWS) 
 
 
