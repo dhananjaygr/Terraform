@@ -98,11 +98,11 @@ Pre-requisites for Deploying AWS Terraform Files in CloudLabs
    Please create a .tfvars file and define values for all variables declared in your variables.tf file, including both the mandatory variables listed earlier and any additional variables required according to your deployment. </br>
 
    **Example:** </br>
-   aws_access_key = "GET-SUBSCRIPTION-CLIENT-ID" </br>  
-   aws_secret_key = "GET-SUBSCRIPTION-CLIENT-SECRET" </br>  
-   aws_region = "us-east-1" </br> 
+   aws_access_key = "GET-SUBSCRIPTION-CLIENT-ID" </br> 
+   aws_secret_key = "GET-SUBSCRIPTION-CLIENT-SECRET" 
+   aws_region = "us-east-1"
       
-   Common or Optional Variable  </br>
+   Common or Optional Variable </br>
    DID = "GET-DEPLOYMENT-ID" </br>
    
       
