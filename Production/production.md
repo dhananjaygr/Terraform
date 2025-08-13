@@ -66,10 +66,10 @@ Pre-requisites for Deploying Azure Terraform Files in CloudLabs
    Then select us-central1 in CloudLabs as well. </br>
 
    **Below are sample nested Terraform files for Azure:** </br>
-   **Cloud Template URL:** 
+   **Cloud Template URL:** </br> 
    https://experienceazure.blob.core.windows.net/templates/WIZ/Testing/main.zip </br>
 
-   **Parameter Template URL:** 
+   **Parameter Template URL:** </br> 
    https://experienceazure.blob.core.windows.net/templates/WIZ/Testing/cl_variablesfile_1.tfvars </br>
  
 #### Prerequisites (AWS) 
@@ -129,10 +129,10 @@ Pre-requisites for Deploying AWS Terraform Files in CloudLabs
    ap-southeast-2 </br>
 
    **Below are sample nested Terraform files for AWS:** </br>
-   **Cloud Template URL:** 
+   **Cloud Template URL:** </br> 
    https://cloudlabs-prod-templates-s3.s3.us-east-1.amazonaws.com/WIZ/test/AWSTerraform/main.zip </br>
 
-   **Parameter Template URL:** 
+   **Parameter Template URL:** </br> 
    https://cloudlabs-prod-templates-s3.s3.us-east-1.amazonaws.com/WIZ/test/AWSTerraform/wiz_variables_1.tfvars </br>
 
 
