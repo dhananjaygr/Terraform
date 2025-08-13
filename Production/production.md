@@ -99,7 +99,7 @@ Pre-requisites for Deploying AWS Terraform Files in CloudLabs
 
    **Example:** </br>
    aws_access_key = "GET-SUBSCRIPTION-CLIENT-ID" </br> 
-   aws_secret_key = "GET-SUBSCRIPTION-CLIENT-SECRET" 
+   aws_secret_key = "GET-SUBSCRIPTION-CLIENT-SECRET" </br> 
    aws_region = "us-east-1"
       
    Common or Optional Variable </br>
