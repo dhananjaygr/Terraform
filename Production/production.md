@@ -39,7 +39,7 @@ Pre-requisites for Deploying Azure Terraform Files in CloudLabs
     location </br>
       
 3. **Create a .tfvars File** </br>
-   Create a .tfvars file to define values for all variables declared in variables.tf. </br>
+   Create a .tfvars file to define values for variables declared in variables.tf. </br>
    Example: </br>
    azure\_client\_id       = "GET-SUBSCRIPTION-CLIENT-ID" </br>
    azure\_client\_secret   = "GET-SUBSCRIPTION-CLIENT-SECRET" </br>
