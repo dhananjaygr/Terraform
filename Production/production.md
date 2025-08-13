@@ -196,3 +196,26 @@ Pre-requisites for Deploying GCP Terraform Files in CloudLabs
 
    **Parameter Template URL:** </br> 
    https://cloudlabs-prod-templates-s3.s3.us-east-1.amazonaws.com/WIZ/test/GCPTerraform/var_file_3.tfvars </br>
+
+
+1. Log in to the CL portal and navigate to the required tenant (WIZ). On the left-hand side of the page, you will see the Template section.
+
+2. Navigate to the **Template (1)** section in the left menu and go to your respective Template. Click the **Edit (2)** button.
+
+   ![](./Img/01.png)
+
+3. In the template, scroll down to the **Cloud Template** section. Then, either edit an existing template or click **Add** if it’s a new template.
+
+4. Under the Cloud Template section, ensure that Template Type is set to **Terraform (1)** from the dropdown. Then, select Template File Type as **ZIP (2)**.
+
+5. Then provide the following: </br>
+   **Terraform Script URL – Paste the URL of the .zip file containing all your Terraform files. (3)** </br>
+   **Parameter Template URL – Paste the URL of the .tfvars file. (4)** </br>
+
+6. Click the **Submit (5)** button. 
+
+   ![](./Img/02.png)
+
+7. Finally, click the **Submit** button for the entire template.
+
+   ![](./Img/03.png)
