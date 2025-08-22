@@ -173,7 +173,7 @@ Pre-requisites for Deploying GCP Terraform Files in CloudLabs
    >**Note 2:** </br>
    All mandatory variables must be present in both variables.tf file and the .tfvars file. </br>
    Any variable without a default value in variables.tf must be provided in the .tfvars file. </br>
-   Even if a variable has a default value in variables.tf, you can still define it in the .tfvars file.
+   Even if a variable has a default value in the variables.tf, you can still define it in the .tfvars file.
       
    >**Note 3:** </br> 
    If multiple regions are selected in CloudLabs and one region already has a running deployment, new deployments will automatically shift to another available region. </br>
