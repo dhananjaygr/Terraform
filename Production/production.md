@@ -225,4 +225,14 @@ Pre-requisites for Deploying GCP Terraform Files in CloudLabs
 
    ![](./Img/04.png)
 
+9. Once inside the Users section, click on the **Lab Status** section.
+
+   ![](./Img/05.png)
+
+10. Scroll down to the Deployment Log section to view the Terraform logs for that deployment. Copy the URL, paste it into a new tab, and you can view the logs.
+
+   ![](./Img/06.png)
+
+
+
 
