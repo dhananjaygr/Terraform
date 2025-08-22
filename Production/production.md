@@ -173,7 +173,7 @@ Pre-requisites for Deploying GCP Terraform Files in CloudLabs
    >**Note 2:** </br>
    All mandatory variables must be present in both variables.tf file and the .tfvars file. </br>
    Any variable without a default value in variables.tf must be provided in the .tfvars file. </br>
-   Even if a variable has a default value in variables.tf, you can still override it in the .tfvars. </br>
+   Even if a variable has a default value in variables.tf, you can still define it in the .tfvars file.
       
    >**Note 3:** </br> 
    If multiple regions are selected in CloudLabs and one region already has a running deployment, new deployments will automatically shift to another available region. </br>
@@ -225,13 +225,13 @@ Pre-requisites for Deploying GCP Terraform Files in CloudLabs
 
    ![](./Img/04.png)
 
-9. Once inside the Users section, click on the **Lab Status** section.
+9. Once the user has been deployed, click on the **Lab Status** section.
 
    ![](./Img/05.png)
 
 10. Scroll down to the Deployment Log section to view the Terraform logs for that deployment. Copy the URL, paste it into a new tab, and you can view the logs.
 
-   ![](./Img/06.png)
+    ![](./Img/06.png)
 
 
 
