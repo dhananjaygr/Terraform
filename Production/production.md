@@ -6,17 +6,17 @@ Terraform support for Nested files.
 
 ### Implementation
 
-In the cloudlabs template, a Zip file of nested Terraform files can be provided.
+In the CloudLabs template, a ZIP file of nested Terraform files can be provided.
 
-### Steps to Test the Terraform support for Nested files. 
+### Steps to Test the Terraform Support for Nested files. 
 
 ### Prerequisites
 
-Some prerequisites need to be followed for all the clouds (Azure, AWS, and GCP) before deploying the Nested Terraform files
+Some prerequisites need to be followed for all the clouds (Azure, AWS, and GCP) before deploying the Nested Terraform files.
 
 #### 1. Prerequisites (Azure) 
 
-Pre-requisites for Deploying Azure Terraform Files in CloudLabs
+Prerequisites for Deploying Azure Terraform Files in CloudLabs
       
 - **Required .tf Files** </br>
    Make sure you have the following four Terraform files: </br>
@@ -38,7 +38,7 @@ Pre-requisites for Deploying Azure Terraform Files in CloudLabs
     azure_tenant_id </br>
     location </br>
       
-- **Create a seperate .tfvars File** </br>
+- **Create a separate .tfvars File** </br>
    Please create a .tfvars file and define values for all variables declared in your variables.tf file, including both the mandatory variables listed earlier and any additional variables required according to your deployment. </br>
 
    Example: </br>
@@ -53,15 +53,15 @@ Pre-requisites for Deploying Azure Terraform Files in CloudLabs
    
       
    >**Note 1:** </br>
-   All mandatory variables must be present in both variables.tf file and the .tfvars file. </br>
-   Any variable without a default value in variables.tf must be provided in the .tfvars file. </br>
+   All mandatory variables must be present in both the variables.tf file and the .tfvars file. </br>
+   Any variable without a default value in the variables.tf must be provided in the .tfvars file. </br>
    Even if a variable has a default value in the variables.tf, you can still define it in the .tfvars file.
       
    >**Note 2:** </br> 
    If multiple regions are selected in CloudLabs and one region already has a running deployment, new deployments will automatically shift to another available region. </br>
    **Important:** Terraform always deploys to the region specified in the .tfvars file. </br>
    To avoid conflicts or inconsistencies, make sure the region in .tfvars matches one of the selected regions in CloudLabs. </br> 
-   For Example, If .tfvars specifies location = "us-central1" </br>
+   For example, if .tfvars specifies location = "us-central1" </br>
    Then select us-central1 in CloudLabs as well. </br>
 
    **Below are sample nested Terraform files for Azure:** </br>
@@ -73,7 +73,7 @@ Pre-requisites for Deploying Azure Terraform Files in CloudLabs
  
 #### 2. Prerequisites (AWS) 
 
-Pre-requisites for Deploying AWS Terraform Files in CloudLabs
+Prerequisites for Deploying AWS Terraform Files in CloudLabs
       
 - **Required .tf Files** </br>
    Make sure you have the following four Terraform files: </br>
@@ -93,7 +93,7 @@ Pre-requisites for Deploying AWS Terraform Files in CloudLabs
     aws_secret_key </br>
     aws_region </br>
        
-- **Create a seperate .tfvars File** </br>
+- **Create a separate .tfvars File** </br>
    Please create a .tfvars file and define values for all variables declared in your variables.tf file, including both the mandatory variables listed earlier and any additional variables required according to your deployment. </br>
 
    **Example:** </br>
@@ -106,15 +106,15 @@ Pre-requisites for Deploying AWS Terraform Files in CloudLabs
    
       
    >**Note 1:** </br>
-   All mandatory variables must be present in both variables.tf file and the .tfvars file. </br>
-   Any variable without a default value in variables.tf must be provided in the .tfvars file. </br>
+   All mandatory variables must be present in both the variables.tf file and the .tfvars file. </br>
+   Any variable without a default value in the variables.tf must be provided in the .tfvars file. </br>
    Even if a variable has a default value in the variables.tf, you can still define it in the .tfvars file.
       
    >**Note 2:** </br> 
    If multiple regions are selected in CloudLabs and one region already has a running deployment, new deployments will automatically shift to another available region. </br>
    Important: Terraform always deploys to the region specified in the .tfvars file. </br>
    To avoid conflicts or inconsistencies, make sure the region in .tfvars matches one of the selected regions in CloudLabs. </br> 
-   For Example, If .tfvars specifies location = "us-east-1" </br>
+   For example, if .tfvars specifies location = "us-east-1" </br>
    Then select us-central1 in CloudLabs as well. </br>
        
    **Allowed Regions (AWS) in CloudLabs:** </br>
@@ -136,7 +136,7 @@ Pre-requisites for Deploying AWS Terraform Files in CloudLabs
 
 #### 3. Prerequisites (GCP) 
 
-Pre-requisites for Deploying GCP Terraform Files in CloudLabs
+Prerequisites for Deploying GCP Terraform Files in CloudLabs
       
 - **Required .tf Files** </br>
    Make sure you have the following four Terraform files: </br>
@@ -156,7 +156,7 @@ Pre-requisites for Deploying GCP Terraform Files in CloudLabs
     project_id 
     region 
        
-- **Create a seperate .tfvars File** </br>
+- **Create a separate .tfvars File** </br>
    Please create a .tfvars file and define values for all variables declared in your variables.tf file, including both the mandatory variables listed earlier and any additional variables required according to your deployment. </br>
 
    **Example:** </br>
@@ -168,18 +168,18 @@ Pre-requisites for Deploying GCP Terraform Files in CloudLabs
    DID = "GET-DEPLOYMENT-ID" </br>
    
    >**Note 1:** </br>
-   For zonal resources, you must specify the zone value in both variables.tf file (e.g., variable "zone" {}) and the .tfvars file.   
+   For zonal resources, you must specify the zone value in both the variables.tf file (e.g., variable "zone" {}) and the .tfvars file.   
       
    >**Note 2:** </br>
-   All mandatory variables must be present in both variables.tf file and the .tfvars file. </br>
-   Any variable without a default value in variables.tf must be provided in the .tfvars file. </br>
+   All mandatory variables must be present in both the variables.tf file and the .tfvars file. </br>
+   Any variable without a default value in the variables.tf must be provided in the .tfvars file. </br>
    Even if a variable has a default value in the variables.tf, you can still define it in the .tfvars file.
       
    >**Note 3:** </br> 
    If multiple regions are selected in CloudLabs and one region already has a running deployment, new deployments will automatically shift to another available region. </br>
    Important: Terraform always deploys to the region specified in the .tfvars file. </br>
    To avoid conflicts or inconsistencies, make sure the region in .tfvars matches one of the selected regions in CloudLabs. </br> 
-   For Example, If .tfvars specifies location = "us-central1" </br>
+   For example, if .tfvars specifies location = "us-central1" </br>
    Then select us-central1 in CloudLabs as well. </br>
        
    **Allowed Regions (GCP) in CloudLabs:** </br>
